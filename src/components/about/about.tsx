@@ -14,7 +14,7 @@ function About() {
     ]
 
     return (
-        <main>
+        <main className="about">
             <h1>Sobre</h1>
             <article className="about-container">
                 <section className="about-information">

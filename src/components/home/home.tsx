@@ -1,17 +1,19 @@
 // import { React } from 'react';
 import './home.scss'
 // import Typewritter from 'typewriter-effect';
-// import Typewriter from 'typewriter-effect';
+import Typewriter from 'typewriter-effect';
 // import Typical from 'react-typical';
 
 function Home(){
 
     const imgs: any[] = [
-        { name: 'Facebook',icon : 'logo-facebook.svg' }, 
-        { name: 'Instagram',icon : 'logo-instagram.svg' }, 
-        { name: 'Linkedin',icon : 'logo-linkedin.svg' }
+        { name: 'Facebook', icon : 'logo-facebook.svg', link: 'https://www.facebook.com/gabriel.george.7965/' }, 
+        { name: 'Instagram', icon : 'logo-instagram.svg', link: 'https://www.instagram.com/geeorg3___/' }, 
+        { name: 'Linkedin', icon : 'logo-linkedin.svg', link: 'https://www.linkedin.com/in/gabriel-george-alves-nicodemus-8aa13b192/' }
     ];
-
+    function openMedia(url: string) {
+        window.open(url);
+    }
     // var app: any = document.getElementById('app');
 
     // var typewriter: any = new Typewriter(app, {
@@ -38,39 +40,23 @@ function Home(){
                             <span className="font-small">Bem vindo ao meu mundo.</span>
                             {/* <p>Olá, me chamo <span>Gabriel</span>  sou um estudante e Desenvolvedor Front end</p> */}
                             <p id="app">
-                            {/* <Typewriter
+                            <Typewriter
                                 onInit={(typewriter: any) => {
                                     typewriter.typeString('Olá, me chamo <span class="my-name">Gabriel</span>  sou um estudante e Desenvolvedor Front end')
                                     .pauseFor(2500)
                                     .deleteChars(9)
                                     typewriter.typeString('Full Stack?')
-                                    .pauseFor(2500)
-                                    .deleteChars(25)
-                                    typewriter.typeString('UI Designer?')
-                                    .callFunction(() => {
-                                        console.log('String typed out!');
-                                    })
-                                    // .pauseFor(2500)
-                                    // .deleteAll()
-                                    // .callFunction(() => {
-                                    //     console.log('All strings were deleted');
-                                    // })
                                     .start();
                                 }}
-                            /> */}
-                            {/* <Typical
-                            steps={['Hello', 1000, 'Hello world!', 500]}
-                            loop={Infinity}
-                            wrapper="p"
-                            /> */}
+                            />
                             </p>
                                 
                         </div>
                         <div className="main-midias-sociais">
                             <span className="font-small">Minhas midias sociais</span>
                             <div className="main-midias-icons">
-                                {imgs.map( ( {icon, name} ) =>
-                                    <img draggable="false" key={name} src={ '/assets/icon/' + icon } alt={name} />
+                                {imgs.map( ( {icon, name, link} ) =>
+                                    <img draggable="false" key={name} src={ '/assets/icon/' + icon } alt={name} onClick={ () =>{ window.open(link) }} />
                                     )}
                             </div>
                         </div>

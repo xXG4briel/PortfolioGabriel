@@ -13,15 +13,11 @@ import './Style.css'
 function App() {
   return (
     <>
-      {/* <Header></Header> */}
-      {/* <Home></Home> */}
-<<<<<<< HEAD
-      {/* <About></About> */}
-      {/* <Project></Project> */}
-      <Contact></Contact>
-=======
+      <Header></Header>
+      <Home></Home>
       <About></About>
->>>>>>> fd591be32fa7e387838c03810194d98770e73c83
+      <Project></Project>
+      <Contact></Contact>
     </>
   );
 }

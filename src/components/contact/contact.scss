@@ -1,0 +1,94 @@
+main.contact {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 85%;
+    // max-width: 1640px;
+    img {
+        max-height: 453px;
+        width: 45vw;
+    }
+    form{
+        max-height: 453px;
+        height: 100%;
+        aside{
+            height: 100%;
+            width: 45vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // max-width: 465px;
+            // min-width: 100%;
+            .field{
+                // display: flex;
+                width: 100%;
+                max-width: 465px;
+                position: relative;
+                &__label {
+                    position: absolute;
+                    left: 10px;
+                    top: 0.8rem;
+                    padding: 0 0.5rem;
+                    color: #C4C4C4;
+                    cursor: text;
+                    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+                    background-color: white;
+                    padding: 0 6px;
+                    cursor: text;
+                    position: absolute;
+                    top: -9px;
+                    left: 14px;
+                    font-size: 12px;
+                    color: #C4C4C4;
+                    background: white;
+                    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+                }
+                &__input {
+                    height: 42px;
+                }
+                &__textarea {
+                    height: 100%;
+                }
+                &__input, &__textarea {
+                    font-family: inherit;
+                    font-size: inherit;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 4px 12px;
+                    border: 2px solid #C4C4C4;
+                    border-radius: 6px;
+                    outline: none;
+                    resize: none;
+                    &:focus {
+                        border: 2px solid #1861c0 !important;
+                    }
+                }
+                .field__input:focus ~ .field__label {
+                    color: #1861c0 !important;
+                }                
+            }
+            .field:hover {
+                // border:1px solid red;
+                .field__label {
+                    color: #1a73e8;
+                }
+                .field__input, .field__textarea {
+                    border: 2px solid #1a73e8;
+                }
+            }
+            .contact-input {
+                height: 42px;
+                margin: 0 auto 10px;
+            }
+            .contact-textarea{
+                margin: 0 auto;
+                height: calc( 100% - 62px - 62px - 62px - -14px );
+            }
+        }        
+    }
+}
+
