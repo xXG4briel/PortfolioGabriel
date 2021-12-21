@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -17,6 +17,47 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      noscript {
+        /* background: #3F3F4A; */
+        height: 100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .container-no-script {
+        margin: 0 20px;
+        opacity: 0.7;
+        transition: .4s ease;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .container-no-script:hover {
+        opacity: 1;
+      }
+      h1 {
+        font-family: "Roboto", "Bebas Neue", sans-serif;
+        font-size: 2.4rem;
+        color: black;
+        /* color: white; */
+      }
+      img {
+        width: 100%;
+      }
+      @media screen and (max-width: 990px) {
+        h1 {
+          font-size: 1.8rem;
+          text-align: center;
+        }
+      }
+    </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,7 +70,15 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <a title="Como habilitar javascript no Windows ?" class="container-no-script" href="https://support.microsoft.com/pt-br/topic/como-habilitar-javascript-no-windows-88d27b37-6484-7fc0-17df-872f65168279">
+        <img draggable="false" src="/assets/images/undraw_notify.svg" alt="space">
+        <h1>You need to enable JavaScript to run this app.</h1>
+      </a>
+
+      <!-- <div class="container-no-script">
+      </div> -->
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.

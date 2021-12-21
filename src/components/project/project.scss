@@ -51,17 +51,28 @@ main.project {
 }
 
 @media screen and (max-width: 840px) {
-    main {
+    main.project {
         height: auto;
+        width: 100% !important;
         .project-container {
-            // border: 1px solid red;
-            justify-content: space-around;
+            justify-content: space-evenly;// space-around;
+        }
+    }
+}
+
+@media screen and (max-width: 840px) and (max-height: 1000px) {
+    main.project {
+        .project-container {
+            justify-content: center;
+            flex-direction: column;
 
             .project-card{
+                max-width: 300px;
+                min-width: auto;
+                width: 80vw;
                 margin: 10px;
                 height: auto;
-                width: 30vw;
             }
-        }
+        }       
     }
 }

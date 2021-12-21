@@ -92,3 +92,26 @@ main.contact {
     }
 }
 
+@media screen and (max-width: 768px) and (max-height: 1000px) {
+    main.contact {
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            min-width: 280px;
+            width: 100%;
+        }
+        form {
+            width: 100%;
+            aside {
+                width: 100%;
+                .contact-textarea {
+                    height: 84px;
+                    textarea {
+                        height: 84px;
+                    }
+                }
+            }
+        }
+    }
+}
